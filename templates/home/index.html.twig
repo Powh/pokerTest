@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1>Jeux de Poker &#127137;</h1>
+
+    <div style="font-size: xxx-large">
+        KS 2H 5C JD TD
+    </div>
+    
+    <div>
+        <form action="/" method="get">
+            <input
+                type="text"
+                name="cartOne"
+                value="{{ cartOne }}"
+                style="border-radius: 10px; font-size: xxx-large; width: 80px;"
+            >
+
+            <input
+                    type="text"
+                    name="cartTwo"
+                    value="{{ cartTwo }}"
+                    style="border-radius: 10px; font-size: xxx-large; width: 80px;"
+            >
+
+            <input
+                    type="text"
+                    name="cartThree"
+                    value="{{ cartThree }}"
+                    style="border-radius: 10px; font-size: xxx-large; width: 80px;"
+            >
+
+            <input
+                    type="text"
+                    name="cartFour"
+                    value="{{ cartFour }}"
+                    style="border-radius: 10px; font-size: xxx-large; width: 80px;"
+            >
+
+            <input
+                    type="text"
+                    name="cartFive"
+                    value="{{ cartFive }}"
+                    style="border-radius: 10px; font-size: xxx-large; width: 80px;"
+            >
+
+            <div>
+                <button style="
+                    margin-top: 10px;
+                    font-size: large;
+                    background-color: lightblue;
+                    cursor: pointer;
+                    padding: 10px;
+                    border: 1px solid grey;
+                    border-radius: 5px;
+                ">
+                    VALIDER
+                </button>
+            </div>
+        </form>
+
+        <div style="margin-top: 20px">
+            Résultat : {{ gameResult }}
+        </div>
+    </div>
+
+</div>
+{% endblock %}
