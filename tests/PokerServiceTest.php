@@ -41,6 +41,12 @@ class PokerServiceTest extends TestCase
         $this->assertEquals(false, $result);
     }
 
+    public function testcheckPairMinimumEmptyKey(): void
+    {
+        $result = $this->pokerService->checkPairMinimum(["", "", "", "", ""]);
+        $this->assertEquals(false, $result);
+    }
+
     public function testcheckFlushTrue(): void
     {
         $result = $this->pokerService->checkFlush(["S", "S", "S", "S", "S"]);

@@ -65,9 +65,9 @@ class PokerService
     {
         $counts = array_count_values($handValues);
 
-        foreach ($counts as $nbSameCard)
+        foreach ($counts as $key => $nbSameCard)
         {
-            if ($nbSameCard > 1)
+            if ($nbSameCard > 1 && $key !== "")
             {
                 return true;
             }
@@ -131,6 +131,11 @@ class PokerService
     public function checkFlush(array $handColors): bool
     {
         $counts = array_count_values($handColors);
+
+        if (array_keys($counts)[0] === "")
+        {
+            return false;
+        }
 
         return reset($counts) == 5;
     }
